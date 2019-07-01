@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Navbar View</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles/navbarview.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+<style type="text/css">
+    /* nav,header,footer {} */
+</style>
+<script>
+    /* When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size */
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            document.getElementById("navbar").style.padding = "10px 10px";
+        } else {
+            document.getElementById("navbar").style.padding = "10px 10px";
+        }
+    }
+</script>
+<div class="one">
+    <p>For I know the plans I have for you,” declares the LORD,<br> “plans to prosper you and not to harm you,
+        plans to give you hope and a future.<br>-Jeremiah 29:11</p>
+</div>
+
+<body>
+    <div id="navbar">
+        <nav>
+            <ul class="topnav" id="dropdownmenu">
+                <li><a href="">Home</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">About</a></li>
+                <div class="wrap">
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="Search..">
+                        <button type="submit" class="searchButton">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </div>
+                </div>
+                <li class="nav-right"><a href="">Sign in</a></li>
+                <li class="nav-right"><a href="">Sign up</a></li>
+                <li class="dropdown"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li>
+            </ul>
+        </nav>
+    </div>
+    <footer>
+    </footer>
+</body>
+
+</html>

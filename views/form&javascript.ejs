@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form and Javascript</title>
+    <script>
+        function fnChange() {
+            document.getElementById("span_salary").innerText = document.getElementById("txtSalary").value;
+        }
+    </script>
+</head>
+
+<body>
+    Salary: <input type="range" id="txtSalary" onchange="fnChange();" value="25000" step="1000" max="70000" min="22000"/>
+    <span id="span_salary">25000</span>
+    <br/>
+</body>
+
+</html>

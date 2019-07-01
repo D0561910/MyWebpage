@@ -1,0 +1,164 @@
+body {
+    background-image: url(../images/moutains.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #164e63;
+}
+
+#navbar {
+    overflow: hidden;
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+nav {
+    width: 100%;
+    margin: 0;
+}
+
+nav ul {
+    background-color: #133a50;
+    overflow: hidden;
+    margin: 0;
+    padding: 5px;
+}
+
+.topnav li {
+    list-style: none;
+    float: left;
+    margin-left: 10px;
+}
+
+ul.topnav li.nav-right {
+    float: right;
+}
+
+ul.topnav li a {
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #e1e5e6;
+}
+
+ul.topnav li a:hover {
+    background-color: none;
+    color: red;
+    text-shadow: 0px 3px 7px #f6004b;
+}
+
+ul.topnav li.dropdown {
+    display: none;
+}
+
+div {
+    margin: 0px;
+    padding: 0px;
+}
+
+.one {
+    width: 100%;
+    height: 100%;
+    margin-top: 154px;
+    position: absolute;
+}
+
+p {
+    color: #e6ecee;
+    font-family: Harrington;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 7px 15px black;
+}
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #323637;
+}
+
+.searchTerm:focus {
+    color: #323637;
+}
+
+.searchButton {
+    width: 45px;
+    height: 30px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #323637;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*mobile -------*/
+@media screen and (max-width: 680px) {
+    ul.topnav li:not(:nth-child(1)) {
+        display: none;
+    }
+
+    nav ul {
+        background-color: #133a50;
+    }
+
+    ul li a {
+        background: responsive;
+        background-color: #133a50;
+    }
+
+    ul.topnav li a {
+        color: white;
+    }
+
+    ul.topnav li.dropdown {
+        display: block;
+        float: right;
+    }
+
+    ul.topnav.responsive li.dropdown {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    ul.topnav.responsive {
+        position: relative;
+    }
+
+    ul.topnav.responsive li {
+        display: inline;
+        float: none;
+    }
+
+    ul.topnav.resposive li a {
+        display: block;
+        text-align: left;
+    }
+}

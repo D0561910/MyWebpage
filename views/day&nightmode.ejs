@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day and Night mode</title>
+    <link rel="stylesheet" href="./styles/day&night.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="switch">
+            <input type="checkbox" name="switch" id="custom-switch" class="switch-checkbox">
+            <label for="custom-switch" class="switch-label">
+                <span class="switch-one"></span>
+                <span class="switch-two"></span>
+            </label>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $('#custom-switch').change(function(){
+            $('.wrapper').toggleClass('dark-mode');
+        });
+    </script>
+</body>
+
+</html>
