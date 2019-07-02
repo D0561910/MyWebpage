@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text Animation Effect</title>
+    <style>
+        body{
+            background-image: url(./images/fireman.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            height: 100vh;
+        }
+        .wrapper{
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-30%, -30%);
+            text-justify: auto;
+            text-align: center;
+        }
+        .wrapper p{
+            font-size: 60px;
+            font-family: bignoodletitling;
+            letter-spacing: 2px;
+            margin: 15px 0;
+            color: #fff;
+        }
+        .text-area{
+            font-size: 100px;
+            font-family: roboto;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: -5px;
+            text-align: center;
+            text-justify: auto;
+        }
+        .text-area span{
+            color: #262626;
+            opacity: 0;
+            transform: translate(-300px, 0) scale(0);
+            animation: animate 3s forwards;
+            display: inline-block;
+        }
+        .text-area span:nth-of-type(2){
+            animation-delay: .1s;
+        }
+        .text-area span:nth-of-type(3){
+            animation-delay: .2s;
+        }
+        .text-area span:nth-of-type(4){
+            animation-delay: .3s;
+        }
+        .text-area span:nth-of-type(5){
+            animation-delay: .4s;
+        }
+        .text-area span:nth-of-type(6){
+            animation-delay: .5s;
+        }
+        .text-area span:nth-of-type(7){
+            animation-delay: .6s;
+        }
+        .text-area span:nth-of-type(8){
+            animation-delay: .7s;
+        }
+        @keyframes animate{
+            60%{
+                transform: translate(20px, 0) scale(1);
+                color: #fff;
+            }
+            80%{
+                transform: translate(20px, 0) scale(1);
+                color: #fff;
+            }
+            99%{
+                transform: translate(0) scale(1.2);
+                color: #ffb140;
+            }
+            100%{
+                transform: translate(0) scale(1.2);
+                color: #fff;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="text-area">
+            <span>c</span>
+            <span>h</span>
+            <span>a</span>
+            <span>r</span>
+            <span>l</span>
+            <span>e</span>
+            <span>s</span>&nbsp;
+            <span>s</span>
+            <span>i</span>
+            <span>n</span>
+        </div>
+        <p>Junior Programmer & Web Designer</p>
+    </div>
+</body>
+
+</html>

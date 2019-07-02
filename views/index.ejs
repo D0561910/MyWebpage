@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
   <title>Dashboard</title>
   <link href="./dashboardstyles/css" rel="stylesheet">
+  <!-- fontawesome library -->
+  <link rel="stylesheet" href="./vendor/fontawesome-free-5.9.0-web/css/fontawesome.css">
+  <link rel="stylesheet" href="./vendor/fontawesome-free-5.9.0-web/css/brands.css">
+  <link rel="stylesheet" href="././vendor/fontawesome-free-5.9.0-web/css/solid.css">
 
   <!-- BEGIN: Vendor CSS-->
   <link rel="stylesheet" type="text/css" href="./dashboardstyles/vendors.min.css">
@@ -68,19 +72,16 @@
             <li class="nav-item mobile-menu d-md-none mr-auto">
               <a class="nav-link nav-menu-main menu-toggle hidden-xs is-active" href="#">
                 <i data-feather="menu"></i>
-                <!-- <i class="ft-menu font-large-1"></i> -->
               </a>
             </li>
             <li class="nav-item d-none d-md-block">
               <a class="nav-link nav-menu-main menu-toggle hidden-xs is-active" href="#">
                 <i data-feather="menu"></i>
-                <!-- <i class="ft-menu"></i> -->
               </a>
             </li>
             <li class="nav-item d-none d-md-block">
               <a class="nav-link nav-link-expand" href="#">
                 <i data-feather="maximize"></i>
-                <!-- <i class="ficon ft-maximize"></i> -->
               </a>
             </li>
             <li class="dropdown nav-item mega-dropdown d-none d-md-block">
@@ -89,31 +90,26 @@
               <ul class="mega-dropdown-menu dropdown-menu row">
                 <li class="col-md-2">
                   <h6 class="dropdown-menu-header text-uppercase mb-1">
-                    <!-- <i class="ft-link"></i> -->
                     <i data-feather="link"></i> Quick Links
                   </h6>
                   <ul>
                     <li>
                       <a class="my-1" href="#">
-                        <!-- <i class="ft-home"></i> -->
                         <i data-feather="home"></i> Chat
                       </a>
                     </li>
                     <li>
                       <a class="my-1" href="#">
-                        <!-- <i class="ft-grid"></i> -->
                         <i data-feather="grid"></i> Tables
                       </a>
                     </li>
                     <li>
                       <a class="my-1" href="#">
-                        <!-- <i class="ft-bar-chart"></i> -->
                         <i data-feather="bar-chart"></i> Charts
                       </a>
                     </li>
                     <li>
                       <a class="my-1" href="#">
-                        <!-- <i class="ft-sidebar"></i> -->
                         <i data-feather="sidebar"></i> Gallery
                       </a>
                     </li>
@@ -121,7 +117,6 @@
                 </li>
                 <li class="col-md-3">
                   <h6 class="dropdown-menu-header text-uppercase mb-1">
-                    <!-- <i class="ft-star"></i> -->
                     <i data-feather="star"></i> My Bookmarks
                   </h6>
                   <ul class="ml-2">
@@ -141,7 +136,6 @@
                 </li>
                 <li class="col-md-3">
                   <h6 class="dropdown-menu-header text-uppercase">
-                    <!-- <i class="ft-layers"></i> -->
                     <i data-feather="layers"></i> Recent Products
                   </h6>
                   <div class="carousel slide pt-1" id="carousel-example" data-ride="carousel">
@@ -170,7 +164,6 @@
                 </li>
                 <li class="col-md-4">
                   <h6 class="dropdown-menu-header text-uppercase mb-1">
-                    <!-- <i class="ft-thumbs-up"></i> -->
                     <i data-feather="thumbs-up"></i> Get in touch
                   </h6>
                   <form class="form form-horizontal pt-1">
@@ -240,19 +233,15 @@
               <div class="dropdown-menu">
                 <div class="arrow_box">
                   <a class="dropdown-item" href="#">
-                    <!-- <i class="ft-user"></i> -->
                     <i data-feather="user"></i> Email
                   </a>
                   <a class="dropdown-item" href="#">
-                    <!-- <i class="ft-mail"></i> -->
                     <i data-feather="mail"></i> Chat
                   </a>
                   <a class="dropdown-item" href="#">
-                    <!-- <i class="ft-briefcase"></i> -->
                     <i data-feather="briefcase"></i> Project Summary
                   </a>
                   <a class="dropdown-item" href="#">
-                    <!-- <i class="ft-calendar"></i> -->
                     <i data-feather="calendar"></i> Calendar
                   </a>
                 </div>
@@ -260,7 +249,6 @@
             </li>
             <li class="nav-item dropdown navbar-search">
               <a class="nav-link dropdown-toggle hide" data-toggle="dropdown" href="#">
-                <!-- <i class="ficon ft-search"></i> -->
                 <i data-feather="search"></i>
               </a>
               <ul class="dropdown-menu">
@@ -270,7 +258,6 @@
                       <div class="position-relative has-icon-right full-width">
                         <input class="form-control" id="search" type="text" placeholder="Search here...">
                         <div class="form-control-position navbar-search-close">
-                          <!-- <i class="ft-x"></i> -->
                           <i data-feather="x"></i>
                         </div>
                       </div>
@@ -281,7 +268,7 @@
             </li>
           </ul>
           <ul class="nav navbar-nav float-right">
-            <li class="dropdown dropdown-language nav-item">
+            <!-- <li class="dropdown dropdown-language nav-item">
               <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <i class="flag-icon flag-icon-us"></i>
@@ -289,14 +276,10 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="dropdown-flag">
                 <div class="arrow_box">
-                  <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-us"></i> English</a>
                   <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-cn"></i> Chinese</a>
-                  <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-ru"></i> Russian</a>
-                  <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> French</a>
-                  <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-es"></i> Spanish</a>
                 </div>
               </div>
-            </li>
+            </li> -->
             <li class="dropdown dropdown-notification nav-item">
               <a class="nav-link nav-link-label" href="#" data-toggle="dropdown">
                 <!-- <i class="ficon ft-bell bell-shake" id="notification-navbar-link"></i> -->
@@ -387,7 +370,6 @@
                     <a href="javascript:void(0)">
                       <div class="media">
                         <div class="media-left align-self-center">
-                          <!-- <i class="ft-heart font-medium-4 mt-2 info"></i> -->
                           <i data-feather="heart"></i>
                         </div>
                         <div class="media-body">
@@ -534,33 +516,28 @@
             <li class="dropdown dropdown-user nav-item">
               <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                 <span class="avatar avatar-online">
-                  <img src="./dashboardstyles/avatar-s-19.png" alt="avatar">
+                  <img src="./images/image01.jpg" alt="avatar">
                 </span>
               </a>
               <div class="dropdown-menu dropdown-menu-right">
                 <div class="arrow_box_right">
                   <a class="dropdown-item" href="#">
                     <span class="avatar avatar-online">
-                      <img src="./dashboardstyles/avatar-s-19.png" alt="avatar"><span
+                      <img src="./images/image01.jpg" alt="avatar"><span
                         class="user-name text-bold-700 ml-1">John Doe</span>
                     </span>
                   </a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">
-                    <!-- <i class="ft-user"></i> -->
                     <i data-feather="user"></i> Edit Profile</a>
                   <a class="dropdown-item" href="#">
-                    <!-- <i class="ft-mail"></i> -->
                     <i data-feather="mail"></i> My Inbox</a>
                   <a class="dropdown-item" href="#">
-                    <!-- <i class="ft-check-square"></i> -->
                     <i data-feather="check-square"></i> Task</a>
                   <a class="dropdown-item" href="#">
-                    <!-- <i class="ft-message-square"></i> -->
                     <i data-feather="message-square"></i> Chats</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">
-                    <!-- <i class="ft-power"></i> -->
                     <i data-feather="power"></i> Logout</a>
                 </div>
               </div>
@@ -579,13 +556,12 @@
       <ul class="nav navbar-nav flex-row">
         <li class="nav-item mr-auto">
           <a class="navbar-brand" href="#">
-            <img class="brand-logo" alt="Chameleon admin logo" src="./dashboardstyles/logo.png">
-            <h3 class="brand-text">Chameleon</h3>
+            <i class="fas fa-home fa-lg"></i>
+            <h3 class="brand-text"> Charles Blog</h3>
           </a>
         </li>
         <li class="nav-item d-md-none">
           <a class="nav-link close-navbar">
-            <!-- <i class="ft-x"></i> -->
             <i data-feather="x"></i>
           </a>
         </li>
@@ -594,610 +570,64 @@
     <div class="navigation-background" style="background-image: url(&quot;./dashboardstyles/02.jpg&quot;);"></div>
     <div class="main-menu-content ps ps--active-y" style="height: 652px;">
       <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-        <li class="nav-item has-sub open">
-          <a href="#">
-            <!-- <i class="ft-home"></i> -->
-            <i data-feather="home"></i>
-            <span class="menu-title" data-i18n="">Dashboard</span>
-            <span class="badge badge badge-info badge-pill float-right mr-2">3</span>
-          </a>
-          <ul class="menu-content">
-            <li class="active">
-              <a class="menu-item" href="#">eCommerce</a>
-            </li>
-            <li><a class="menu-item" href="#">Analytics</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item has-sub">
-          <a href="#">
-            <i data-feather="layers"></i>
-            <!-- <i class="ft-layers"></i> -->
-            <span class="menu-title" data-i18n="">Apps</span>
-          </a>
-          <ul class="menu-content">
-            <li>
-              <a class="menu-item" href="#">Email Application</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Chat Application</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Full Calendar</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Project Summary</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Invoice</a>
-            </li>
-            <li class="has-sub">
-              <a class="menu-item" href="#">Timelines</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Timelines Center</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Timelines Horizontal</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Users Profile</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Contact List</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item has-sub">
-          <a href="#">
-            <i data-feather="monitor"></i>
-            <!-- <i class="ft-monitor"></i> -->
-            <span class="menu-title" data-i18n="">Templates</span>
-          </a>
-          <ul class="menu-content">
-            <li class="has-sub">
-              <a class="menu-item" href="#">Vertical</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Classic Menu</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Modern Menu</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a class="menu-item" href="#">Horizontal</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Full Width</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item has-sub">
-          <a href="#">
-            <i data-feather="layout"></i>
-            <!-- <i class="ft-layout"></i> -->
-            <span class="menu-title" data-i18n="">Layouts</span>
-            <span class="badge badge badge-pill badge-danger float-right mr-2">5</span>
-          </a>
-          <ul class="menu-content">
-            <li class="has-sub">
-              <a class="menu-item" href="#">Content Sidebar</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Left sidebar</a>
-                </li>
-                <li><a class="menu-item" href="#">Sticky left sidebar</a>
-                </li>
-                <li><a class="menu-item" href="#">Right sidebar</a>
-                </li>
-                <li><a class="menu-item" href="#">Sticky right sidebar</a>
-                </li>
-              </ul>
-            </li>
-            <li class="navigation-divider"></li>
-            <li>
-              <a class="menu-item" href="#">Hide on Scroll Top</a>
-            </li>
-            <li><a class="menu-item" href="#">Compact navigation</a>
-            </li>
-            <li><a class="menu-item" href="#">Fixed navbar</a>
-            </li>
-            <li><a class="menu-item" href="#">Fixed navigation</a>
-            </li>
-            <li><a class="menu-item" href="#">Fixed navbar &amp; navigation</a>
-            </li>
-            <li><a class="menu-item" href="#">Fixed navbar &amp; footer</a>
-            </li>
-            <li class="navigation-divider"></li>
-            <li><a class="menu-item" href="#">Fixed layout</a>
-            </li>
-            <li><a class="menu-item" href="#">Boxed layout</a>
-            </li>
-            <li><a class="menu-item" href="#">Static layout</a>
-            </li>
-            <li class="navigation-divider"></li>
-            <li><a class="menu-item" href="#">Navigation light</a>
-            </li>
-            <li><a class="menu-item" href="#">Navigation Dark</a>
-            </li>
-            <li><a class="menu-item" href="#">Flipped Navigation</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item has-sub">
-          <a href="#">
-            <i data-feather="zap"></i>
-            <!-- <i class="ft-zap"></i> -->
-            <span class="menu-title" data-i18n="">Starter kit</span>
-          </a>
-          <ul class="menu-content">
-            <li class="has-sub">
-              <a class="menu-item" href="#">Content sidebar</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Left sidebar</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Sticky left sidebar</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Right sidebar</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Sticky right sidebar</a>
-                </li>
-              </ul>
-            </li>
-            <li class="navigation-divider"></li>
-            <li>
-              <a class="menu-item" href="#">Fixed navbar</a>
-            </li>
-            <li><a class="menu-item" href="#">Fixed navigation</a>
-            </li>
-            <li><a class="menu-item" href="#">Fixed navbar &amp; navigation</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Fixed navbar &amp; footer</a>
-            </li>
-            <li class="navigation-divider"></li>
-            <li>
-              <a class="menu-item" href="#">Fixed layout</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Boxed layout</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Static layout</a>
-            </li>
-            <li class="navigation-divider"></li>
-            <li>
-              <a class="menu-item" href="#">Navigation Light</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Navigation Dark</a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-sub">
-          <a href="#">
-            <i data-feather="aperture"></i>
-            <!-- <i class="ft-aperture"></i> -->
-            <span class="menu-title" data-i18n="">User Interface</span>
-          </a>
-          <ul class="menu-content">
-            <li class="has-sub">
-              <a class="menu-item" href="#">Content</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Grid</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Typography</a>
-                </li>
-                <li><a class="menu-item" href="#">Text utilities</a>
-                </li>
-                <li><a class="menu-item" href="#">Syntax highlighter</a>
-                </li>
-                <li><a class="menu-item" href="#">Helper classes</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a class="menu-item" href="#">Color Palette</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Primary palette</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Danger palette</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Success palette</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Warning palette</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Info palette</a>
-                </li>
-                <li class="navigation-divider"></li>
-                <li>
-                  <a class="menu-item" href="#">Red palette</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Pink palette</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Purple palette</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Blue palette</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Cyan palette</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Teal palette</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Yellow palette</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Amber palette</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Blue Grey palette</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Bootstrap Cards</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Advanced Cards</a>
-            </li>
-            <li class="has-sub">
-              <a class="menu-item" href="#">Icons</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Feather</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Line Awesome</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Simple Line Icons</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Animation</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item has-sub">
-          <a href="#">
-            <i data-feather="box"></i>
-            <!-- <i class="ft-box"></i> -->
-            <span class="menu-title" data-i18n="">Components</span>
-          </a>
-          <ul class="menu-content">
-            <li class="has-sub">
-              <a class="menu-item" href="#">Bootstrap</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Alerts</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Buttons</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Carousel</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Collapse</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Dropdowns</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">List Group</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Modals</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Pagination</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Navs</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Tabs</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Pills</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Tooltips</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Popovers</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Badges</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Pill Badges</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Progress</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Media Objects</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Spinner</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Toast</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a class="menu-item" href="#">Extra</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="">Sweet Alerts</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Toastr</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Ratings</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Tour</a>
-                </li>
-                <li class="has-sub">
-                  <a class="menu-item" href="#">Editors</a>
-                  <ul class="menu-content">
-                    <li>
-                      <a class="menu-item" href="#">CKEditor</a>
-                    </li>
-                    <li>
-                      <a class="menu-item" href="#">TinyMCE</a>
-                    </li>
-                  </ul>
-                </li>
-                <li><a class="menu-item" href="#">Date &amp; Time Picker</a>
-                </li>
-                <li><a class="menu-item" href="#">Block UI</a>
-                </li>
-                <li><a class="menu-item" href="#">File Uploader</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item has-sub">
-          <a href="#">
-            <i data-feather="edit"></i>
-            <!-- <i class="ft-edit"></i> -->
-            <span class="menu-title" data-i18n="">Forms</span>
-          </a>
-          <ul class="menu-content">
-            <li class="has-sub">
-              <a class="menu-item" href="#">Form Elements</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Form Inputs</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Switch</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Select2</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Checkboxes &amp; Radios</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Tags Input</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Validation</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Extended Inputs</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a class="menu-item" href="#">Form Layouts</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Basic Forms</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Horizontal Forms</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Hidden Labels</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Form Wizard</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Form Repeater</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item has-sub">
-          <a href="#">
-            <i data-feather="grid"></i>
-            <!-- <i class="ft-grid"></i> -->
-            <span class="menu-title" data-i18n="">Tables</span>
-          </a>
-          <ul class="menu-content">
-            <li>
-              <a class="menu-item" href="#">Bootstrap Tables</a>
-            </li>
-            <li class="has-sub">
-              <a class="menu-item" href="#">DataTables</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Basic Initialisation</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Styling</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Data Sources</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Advanced initialisation</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">API</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item has-sub">
-          <a href="#">
-            <i data-feather="bar-chart-2"></i>
-            <!-- <i class="ft-bar-chart-2"></i> -->
-            <span class="menu-title" data-i18n="">Charts</span>
-          </a>
-          <ul class="menu-content">
-            <li>
-              <a class="menu-item" href="">Chartist</a>
-            </li>
-            <li>
-              <a class="menu-item" href="">Chartjs</a>
-            </li>
-            <li class="has-sub">
-              <a class="menu-item" href="#">Maps</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Google Maps</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">jVector Map</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item has-sub">
-          <a href="#">
-            <i data-feather="sidebar"></i>
-            <!-- <i class="ft-sidebar"></i> -->
-            <span class="menu-title" data-i18n="">Pages</span>
-          </a>
-          <ul class="menu-content">
-            <li>
-              <a class="menu-item" href="#">Gallery</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Search</a>
-            </li>
-            <li class="has-sub">
-              <a class="menu-item" href="#">Authentication</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Login</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Register</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Unlock User</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Recover password</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-sub">
-              <a class="menu-item" href="#">Error</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Error 400</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Error 401</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Error 403</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Error 404</a>
-                </li>
-                <li>
-                  <a class="menu-item" href="#">Error 500</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Coming Soon</a>
-            </li>
-            <li>
-              <a class="menu-item" href="#">Maintenance</a>
-            </li>
-          </ul>
-        </li>
-        <li class=" nav-item">
-          <a href="#">
-            <i data-feather="file"></i>
-            <!-- <i class="ft-file"></i> -->
-            <span class="menu-title" data-i18n="">Changelog</span>
-            <span class="badge badge badge-pill badge-warning float-right">1.2</span>
+        <li class="nav-item">
+          <a href="/login_page">
+            <i class="fas fa-sign-in-alt"></i>
+            <span class="menu-title" data-i18n="">Login Page</span>
           </a>
         </li>
-        <li class="nav-item has-sub">
-          <a href="#">
-            <i data-feather="server"></i>
-            <!-- <i class="ft-server"></i> -->
-            <span class="menu-title" data-i18n="">Menu levels</span>
-          </a>
-          <ul class="menu-content">
-            <li>
-              <a class="menu-item" href="#">Second level</a>
-            </li>
-            <li class="has-sub">
-              <a class="menu-item" href="#">Second level child</a>
-              <ul class="menu-content">
-                <li>
-                  <a class="menu-item" href="#">Third level</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class=" nav-item">
-          <a href="#">
-            <i data-feather="life-buoy"></i>
-            <!-- <i class="ft-life-buoy"></i> -->
-            <span class="menu-title" data-i18n="">Raise Support</span>
+        <li class="nav-item">
+          <a href="/B&W_Mode">
+            <i class="fas fa-cloud-sun"></i>
+            <span class="menu-title" data-i18n="">Day & Night mode</span>
           </a>
         </li>
-        <li class=" nav-item">
-          <a href="#">
-            <i data-feather="book"></i>
-            <!-- <i class="ft-book"></i> -->
-            <span class="menu-title" data-i18n="">Documentation</span>
+        <li class="nav-item">
+          <a href="/form_alert">
+            <i class="fas fa-heading"></i>
+            <span class="menu-title" data-i18n="">Form & Alert</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/form_script">
+            <i class="fas fa-heading"></i>
+            <span class="menu-title" data-i18n="">Form & Javascript</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/list">
+            <i class="fas fa-list"></i>
+            <span class="menu-title" data-i18n="">List</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/navbar">
+            <i class="fas fa-caret-square-down"></i>
+            <span class="menu-title" data-i18n="">Navbar & Dropdown</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/navbar_view">
+            <i class="fas fa-caret-square-down"></i>
+            <span class="menu-title" data-i18n="">Navbar view</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/table">
+            <i class="fas fa-table"></i>
+            <span class="menu-title" data-i18n="">Table Example</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/text_animation">
+            <i class="fas fa-font"></i>
+            <span class="menu-title" data-i18n="">Text Animation</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/youtube_example">
+            <i class="fab fa-youtube"></i>
+            <span class="menu-title" data-i18n="">Youtube Player</span>
           </a>
         </li>
       </ul>
@@ -2814,9 +2244,9 @@
   <!-- End: Customizer-->
 
   <!-- BEGIN: Footer-->
-  <a class="btn btn-try-builder btn-bg-gradient-x-purple-red btn-glow white" href="#" target="_blank">
+  <!-- <a class="btn btn-try-builder btn-bg-gradient-x-purple-red btn-glow white" href="#" target="_blank">
     Try Layout Builder
-  </a>
+  </a> -->
   <footer class="footer footer-static footer-light navbar-border navbar-shadow">
     <div class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
       <span class="float-md-left d-block d-md-inline-block">2019 © Copyright
