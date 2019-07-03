@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Text Animation</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: bignoodletitling;
+        }
+        .wrapper{
+            background-color: #f863a6;
+            height: 100vh;
+            color: #fff;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .banner-text{
+            animation: animate 5s infinite;
+            font-size: 100px;
+            letter-spacing: 2px;
+        }
+        @keyframes animate{
+            0%{
+                color: #f863a6;
+            }
+            10%{
+                color: #f863a6;
+            }
+            30%{
+                color: #fff;
+            }
+            50%{
+                color: #f863a6;
+            }
+            60%{
+                color: #f863a6;
+            }
+            80%{
+                color: #fff;
+            }
+            100%{
+                color: #f863a6;
+            }
+        }
+        .banner-text::after{
+            content: '';
+            animation: animate-2 5s linear infinite;
+        }
+        @keyframes animate-2{
+            0%{
+                content: 'Charles Sin is a Handsome'
+            }
+            100%{
+                content: 'Charles Sin become a Full-Stack Developer'
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="banner-text">
+
+        </h1>
+    </div>
+</body>
+</html>

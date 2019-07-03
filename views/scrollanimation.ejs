@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smooth Scroll Animation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+    <style>
+        #wrapper {
+            width: 100%;
+            height: 100vh;
+            scroll-behavior: smooth;
+            overflow-y: scroll;
+        }
+
+        #wrapper div {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .text-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            padding: 0 150px;
+        }
+
+        .text-content h1 {
+            font-size: 100px;
+            font-weight: bold;
+            color: #fff;
+            font-family: bignoodletitling;
+            letter-spacing: 5px;
+        }
+
+        .text-content p {
+            font-family: merienda;
+            line-height: 35px;
+            color: #fff;
+        }
+
+        ul {
+            position: fixed;
+            top: 10%;
+            right: 15px;
+            transform: translateY(50%);
+            margin: 0;
+            padding: 0;
+            z-index: 1;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        ul li a {
+            display: block;
+            text-decoration: none;
+            height: 45px;
+            font-size: 24px;
+            background: #fff;
+            width: 55px;
+            color: #262626;
+            margin: 4px 0;
+            padding-left: 15px;
+            line-height: 45px;
+        }
+
+        ul li a:hover {
+            background: #333;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #home {
+            background-image: url(./images/5.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        #about {
+            background-color: goldenrod;
+        }
+
+        #portfolio {
+            background-color: deepskyblue;
+        }
+
+        #services {
+            background-color: brown;
+        }
+
+        #contact {
+            background-color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="#home">
+                <i class="fa fa-home"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#about">
+                <i class="fa fa-book"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#portfolio">
+                <i class="fa fa-cog"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#services">
+                <i class="fa fa-folder"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#contact">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </li>
+    </ul>
+
+    <div id="wrapper">
+        <div id="home">
+            <section class="text-content">
+                <h1>Homepage</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque quod, minima adipisci
+                    fugiat in ipsa quibusdam fugit eligendi. Reiciendis deleniti, excepturi quod obcaecati illum veniam
+                    at quos sunt qui?</p>
+            </section>
+        </div>
+        <div id="about">
+            <section class="text-content">
+                <h1>About Section</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque quod, minima adipisci
+                    fugiat in ipsa quibusdam fugit eligendi. Reiciendis deleniti, excepturi quod obcaecati illum veniam
+                    at quos sunt qui?</p>
+            </section>
+        </div>
+        <div id="portfolio">
+            <section class="text-content">
+                <h1>Portfolio Section</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque quod, minima adipisci
+                    fugiat in ipsa quibusdam fugit eligendi. Reiciendis deleniti, excepturi quod obcaecati illum veniam
+                    at quos sunt qui?</p>
+            </section>
+        </div>
+        <div id="services">
+            <section class="text-content">
+                <h1>Services Section</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque quod, minima adipisci
+                    fugiat in ipsa quibusdam fugit eligendi. Reiciendis deleniti, excepturi quod obcaecati illum veniam
+                    at quos sunt qui?</p>
+            </section>
+        </div>
+        <div id="contact">
+            <section class="text-content">
+                <h1>Contact Section</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque quod, minima adipisci
+                    fugiat in ipsa quibusdam fugit eligendi. Reiciendis deleniti, excepturi quod obcaecati illum veniam
+                    at quos sunt qui?</p>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

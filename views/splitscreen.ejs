@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: merienda;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            width: 400px;
+            height: 400px;
+            background: url(https://i.postimg.cc/26sBPF74/1.jpg);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .wrapper:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.92);
+        }
+
+        .wrapper .img-area {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .wrapper .img-area span {
+            width: 20%;
+            height: 100%;
+            background: url(./images/5.jpg);
+            transition: 0.5s;
+        }
+
+        .wrapper .img-area span:nth-child(1) {
+            background-position: 0;
+            transition-delay: 0s;
+        }
+
+        .wrapper .img-area span:nth-child(2) {
+            background-position: 25%;
+            transition-delay: 0.1s;
+        }
+
+        .wrapper .img-area span:nth-child(3) {
+            background-position: 50%;
+            transition-delay: 0.2s;
+        }
+
+        .wrapper .img-area span:nth-child(4) {
+            background-position: 75%;
+            transition-delay: 0.3s;
+        }
+
+        .wrapper .img-area span:nth-child(5) {
+            background-position: 100%;
+            transition-delay: 0.45s;
+        }
+
+        .wrapper:hover .img-area>span {
+            transform: translateY(-100%);
+        }
+
+        .wrapper:hover .img-text {
+            transform: translateY(0);
+            transition: 1s;
+            transition-delay: 0.1s;
+        }
+
+        .img-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+            transform: translateY(100%);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .img-text h2 {
+            margin: 5px 0;
+        }
+
+        .img-text h3 {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="img-area">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="img-text">
+            <h2>Carles Sin</h2>
+            <h3>Will become a Full-Stack Developer</h3>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci dolorem et iure nobis,
+                voluptatem.</h4>
+        </div>
+    </div>
+
+</body>
+
+</html>

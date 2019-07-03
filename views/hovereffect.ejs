@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hover Effect</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #d1d1d1;
+        }
+
+        div {
+            box-sizing: border-box;
+        }
+
+        .member {
+            display: inline-block;
+            width: 370px;
+            height: 430px;
+        }
+
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+
+        .member {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .member:hover .preset-data {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .preset-data {
+            position: absolute;
+            bottom: 0;
+            padding: 10px 20px;
+            min-width: 175px;
+            background-color: rgba(34, 34, 34, 0.8);
+            transition: .3s ease all;
+            opacity: 1;
+            visibility: visible;
+            color: #fff;
+        }
+
+        .preset-data p,
+        .preset-data h3 {
+            margin: 0;
+        }
+
+        .member-content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 10%;
+            left: 0;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            z-index: 11;
+            padding: 30px;
+            opacity: 0;
+            transition: .3s all ease-out;
+        }
+
+        .member-content:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: -1;
+            transition: .25s opacity ease;
+        }
+
+        .overlay-border:before,
+        .overlay-border:after {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            bottom: 20px;
+            left: 20px;
+            content: '';
+            opacity: 0;
+            transition: opacity .35s, transform .35s;
+            z-index: 1;
+        }
+
+        .overlay-border:before {
+            border-top: 5px solid #e91e63;
+            border-bottom: 5px solid #e91e63;
+            transform: scale(0, 1);
+        }
+
+        .overlay-border:after {
+            border-right: 5px solid #e91e63;
+            border-left: 5px solid #e91e63;
+        }
+
+        .member-data {
+            position: relative;
+            z-index: 10;
+            color: #fff;
+        }
+
+        .member-content:hover {
+            top: 0;
+            opacity: 1;
+        }
+
+        .member-content:hover .overlay-border:before,
+        .member-content:hover .overlay-border:after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .btn {
+            background-color: #e91e63;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Our Team</h1>
+        <div class="member">
+            <img src="./images/4.jpg" alt="">
+            <div class="preset-data">
+                <h3>Charles Sin</h3>
+                <p>Software Developer</p>
+            </div>
+            <div class="member-content">
+                <div class="overlay-border"></div>
+                <div class="member-data">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque quod, minima adipisci
+                        fugiat in ipsa quibusdam fugit eligendi. Reiciendis deleniti, excepturi quod obcaecati illum
+                        veniam at quos sunt qui?
+                    </p>
+                    <a href="#!" class="btn">Know more</a>
+                </div>
+            </div>
+        </div>
+        <div class="member">
+            <img src="./images/4.jpg" alt="">
+            <div class="preset-data">
+                <h3>Charles Sin</h3>
+                <p>Software Developer</p>
+            </div>
+            <div class="member-content">
+                <div class="overlay-border"></div>
+                <div class="member-data">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque quod, minima adipisci
+                        fugiat in ipsa quibusdam fugit eligendi. Reiciendis deleniti, excepturi quod obcaecati illum
+                        veniam at quos sunt qui?
+                    </p>
+                    <a href="#!" class="btn">Know more</a>
+                </div>
+            </div>
+        </div>
+        <div class="member">
+            <img src="./images/4.jpg" alt="">
+            <div class="preset-data">
+                <h3>Charles Sin</h3>
+                <p>Software Developer</p>
+            </div>
+            <div class="member-content">
+                <div class="overlay-border"></div>
+                <div class="member-data">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque quod, minima adipisci
+                        fugiat in ipsa quibusdam fugit eligendi. Reiciendis deleniti, excepturi quod obcaecati illum
+                        veniam at quos sunt qui?
+                    </p>
+                    <a href="#!" class="btn">Know more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

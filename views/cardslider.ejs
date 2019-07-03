@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mouseover Cardslider</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #262626;
+            font-family: roboto;
+        }
+
+        .slider-area {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1000px;
+            height: 400px;
+            background: #fff;
+            overflow: hidden;
+        }
+
+
+        .img-area {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .nav-area {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            background: #f1f1f1;
+        }
+
+        .nav-area ul {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            height: 100%;
+        }
+
+        .nav-area ul li {
+            list-style: none;
+            width: 25%;
+            text-align: center;
+            line-height: 50px;
+            border-right: 1px solid #262626;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .nav-area ul li:hover {
+            background: #f863a6;
+            color: #fff;
+        }
+
+        .nav-area ul li:last-child {
+            border-right: none;
+        }
+
+        .img-area .single-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 350px;
+            box-sizing: border-box;
+            padding: 50px;
+            background: #f1f1f1;
+            background-position: center !important;
+            color: #fff;
+        }
+
+        .single-img h1 {
+            font-size: 60px;
+            margin: 0;
+        }
+
+        .img-area .single-img:nth-child(1) {
+            background: url(./images/1.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+
+        .img-area .single-img:nth-child(2) {
+            background: url(./images/2.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+
+        .img-area .single-img:nth-child(3) {
+            background: url(./images/3.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+
+        .img-area .single-img:nth-child(4) {
+            background: url(./images/4.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+
+        .active {
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-area">
+        <div class="img-area">
+            <div class="single-img">
+                <h1>Jason Doe</h1>
+                <p>Front-End Developer</p>
+            </div>
+            <div class="single-img">
+                <h1>David Wood</h1>
+                <p>Back-End Developer</p>
+            </div>
+            <div class="single-img">
+                <h1>Claire Chedd</h1>
+                <p>UI Designer</p>
+            </div>
+            <div class="single-img">
+                <h1>Charles Sin</h1>
+                <p>Full-Stack Developer</p>
+            </div>
+        </div>
+        <div class="nav-area">
+            <ul>
+                <li>Member One</li>
+                <li>Member Two</li>
+                <li>Member Three</li>
+                <li>Member Four</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.nav-area ul li:nth-child(1)').on('mouseover', function () {
+                $('.img-area .single-img').removeClass('active');
+                $('.img-area .single-img:nth-child(1)').addClass('active');
+            })
+            $('.nav-area ul li:nth-child(2)').on('mouseover', function () {
+                $('.img-area .single-img').removeClass('active');
+                $('.img-area .single-img:nth-child(2)').addClass('active');
+            })
+            $('.nav-area ul li:nth-child(3)').on('mouseover', function () {
+                $('.img-area .single-img').removeClass('active');
+                $('.img-area .single-img:nth-child(3)').addClass('active');
+            })
+            $('.nav-area ul li:nth-child(4)').on('mouseover', function () {
+                $('.img-area .single-img').removeClass('active');
+                $('.img-area .single-img:nth-child(4)').addClass('active');
+            })
+        })
+    </script>
+</body>
+
+</html>
