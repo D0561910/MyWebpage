@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text Rotate Animation</title>
+    <style>
+        body {
+            background-image: url(./images/5.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            height: 100vh;
+            background-repeat: no-repeat;
+        }
+        .wrapper{
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+        }
+        .wrapper h2{
+            color: #D9D7DD;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: bignoodletitling;
+            font-size: 50px;
+            letter-spacing: 4px;
+            margin: 0;
+        }
+        .wrapper h1{
+            color: #D9D7DD;
+            font-size: 140px;
+            text-transform: uppercase;
+            font-family: bignoodletitling;
+            margin: 0;
+        }
+        .animate-text{
+            display: inline;
+            text-indent: 8px;
+        }
+        .animate-text span{
+            animation: animate 12s linear infinite;
+            color: crimson;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+        }
+        .animate-text span:nth-child(2){
+            animation-delay: 2.5s;
+        }
+        .animate-text span:nth-child(3){
+            animation-delay: 5s;
+        }
+        .animate-text span:nth-child(4){
+            animation-delay: 7.5s;
+        }
+        .animate-text span:nth-child(5){
+            animation-delay: 10s;
+        }
+        @keyframes animate{
+            0%{
+                opacity: 0;
+            }
+            5%{
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            10%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+            25%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+            30%{
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            80%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Charles Sin</h1>
+        <h2>I am a
+            <div class="animate-text">
+                <span>Developer</span>
+                <span>Desinger</span>
+                <span>Freelancer</span>
+                <span>Student</span>
+            </div>
+        </h2>
+    </div>
+</body>
+
+</html>

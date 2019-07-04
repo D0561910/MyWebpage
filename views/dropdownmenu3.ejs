@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dropdown Menu Hover Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Poppins;
+            background-image: url(./images/image01.jpg);
+            height: 100vh;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        ul {
+            list-style: none;
+            background-color: #F4CBC6;
+        }
+
+        .container {
+            width: 1170px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .nav {
+            display: inline-block;
+            padding: 0 50px;
+            text-align: center;
+            margin: 0 10px;
+            position: absolute;
+            color: #7B8CDE;
+            background: #171123;
+        }
+
+        .nav li:hover {
+            background: #fff;
+        }
+
+        .nav>li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            background: #262626;
+            color: #fff;
+        }
+
+        .nav>ul>li {
+            float: left;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            position: relative;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        ul.sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            padding: 0;
+        }
+
+        ul.sub-menu li {
+            background-color: #262626;
+        }
+
+        ul.sub-menu li:hover {
+            background-color: #000;
+        }
+
+        ul.sub-menu li {
+            display: none;
+        }
+
+        li:hover>ul.sub-menu li {
+            display: block;
+        }
+        li:hover > ul.sub-menu.animate{
+            perspective: 1000px;
+        }
+        li:hover > ul.sub-menu.animate li{
+            transform-origin: top center;
+            opacity: 0; 
+        }
+        li:hover > ul.sub-menu.animate li:nth-child(1){
+            animation-name: animate;
+            animation-delay: -150ms;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+        }
+        li:hover > ul.sub-menu.animate li:nth-child(2){
+            animation-name: animate;
+            animation-delay: 0ms;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+        }
+        li:hover > ul.sub-menu.animate li:nth-child(3){
+            animation-name: animate;
+            animation-delay: 150ms;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+        }
+        li:hover > ul.sub-menu.animate li:nth-child(4){
+            animation-name: animate;
+            animation-delay: 300ms;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+        }
+        li:hover > ul.sub-menu.animate li:nth-child(4){
+            animation-name: animate;
+            animation-delay: 450ms;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+        }
+        @keyframes animate{
+            0%{
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            70%{
+                transform: translateX(20px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Portfolio</li>
+                <li>Services
+                    <ul class="sub-menu animate">
+                        <li>Web Design</li>
+                        <li>Developer</li>
+                        <li>Graphics Design</li>
+                        <li>Interior Design</li>
+                    </ul>
+                </li>
+                <li>Contant</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
