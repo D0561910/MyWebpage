@@ -76,14 +76,19 @@ router.get('/table', function(req, res, next) {
   res.render('tableview');
 });
 
-/* GET Text animation page. */
+/* GET Text Animation page. */
 router.get('/text_animation_1', function(req, res, next) {
   res.render('textanimation1');
 });
 
-/* GET text animation page. */
+/* GET Text Animation page. */
 router.get('/text_animation_2', function(req, res, next) {
   res.render('textanimation2');
+});
+
+/* GET Shiny Text Animation page. */
+router.get('/text_animation_3', function(req, res, next) {
+  res.render('textanimation3');
 });
 
 /* GET Youtube Player page. */
