@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* $body-color-start: #1A1C21;
+$body-color-end: #262730; */
+
+body {
+    background: linear-gradient(to left, #1A1C21, #262730);
+    font-family: 'Roboto', sans-serif;
+}
+
+body .shape {
+    position: absolute;
+    left: -300px;
+    top: -200px;
+    z-index: -1;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin: 20px 200px;
+}
+
+.container header {
+    text-align: right;
+    padding: 20px 0;
+}
+
+.container header p a {
+    color: #fff;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.container .content {
+    margin-top: 150px;
+    color: #fff;
+}
+
+.container .content h1 {
+    margin: 5px 0;
+    font-size: 50px
+}
+
+.container .content p {
+    color: rgb(204, 202, 202);
+    font-weight: 300;
+}
+
+.container .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container .content ul li {
+    display: inline-block;
+    margin: 40px 10px 0 10px;
+}
+
+.container .content ul a {
+    color: #eee;
+    font-size: 25px;
+}
+
+.container .right-content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: left;
+    direction: ltr;
+}
+
+.container .right-content .posts {
+    width: 100%;
+    max-width: 900px;
+}
+
+.container .right-content .posts .read-more {
+    text-align: right;
+    margin-top: 40px;
+}
+
+.container .right-content .posts .read-more a {
+    color: #fff;
+}
+
+.container .right-content .posts .read-more span {
+    margin-left: 10px;
+}
+
+.container .right-content .posts .post {
+    color: #fff;
+    margin-top: 20px;
+}
+
+.container .right-content .posts .post:first-child {
+    margin: 0;
+}
+
+.container .right-content .posts .post header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .right-content .posts .post p {
+    margin: 0;
+}
+
+.container .right-content .posts .post .post-title {
+    font-size: 25px;
+}
+
+.container .right-content .posts .post .post-date,
+.post-content {
+    color: #aaa;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.container .right-content .posts .post .post-content {
+    width: auto;
+    max-width: 600px;
+}

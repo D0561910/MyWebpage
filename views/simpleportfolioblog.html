@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Portfolio Blog</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+
+        body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        a,
+        a:hover {
+            text-decoration: none;
+        }
+
+        .container-fluid {
+            padding: 50px 250px;
+            position: relative;
+        }
+
+        #header h1 {
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        #header ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+
+        #header ul li {
+            margin: 0 20px;
+        }
+
+        #header ul li a {
+            color: #999;
+        }
+
+        #header ul li a.active {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .widget {
+            width: 250px;
+            height: 250px;
+            background-color: rgba(124, 160, 226, 0.377);
+            position: absolute;
+            left: -100px;
+            top: 250px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .widget .widget-content {
+            width: 180px;
+            height: 180px;
+            background-color: rgba(124, 151, 226, 0.89);
+            border-radius: 100%;
+        }
+
+        .shape {
+            z-index: -1;
+            position: absolute;
+            left: -200px;
+            top: 300px;
+        }
+
+        .main-content {
+            margin: 200px 0 0 0;
+        }
+
+        .main-content h1 {
+            font-weight: bold;
+            font-size: 70px;
+        }
+
+        .main-content p {
+            color: #999;
+            font-size: 30px;
+        }
+
+        .main-content .title {
+            color: #6071A4;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .main-content .posts .post {
+            margin-bottom: 20px;
+            padding: 25px;
+            background: #fff;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+        }
+
+        .main-content .posts .post .post-title {
+            font-size: 20px;
+        }
+
+        .main-content .posts .post .post-date {
+            font-size: 13px;
+        }
+
+        .main-content .posts .post .post-content p {
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .main-content .posts .read-more {
+            text-align: right;
+            font-size: 25px;
+            margin-top: 45px;
+        }
+
+        .main-content .posts .read-more a {
+            color: #6071A4;
+        }
+
+        .main-content .posts .read-more a span.fa {
+            margin-left: 10px;
+        }
+
+        .main-content .specializ {
+            margin: 250px 0;
+        }
+
+        .main-content .specializ .skill {
+            background-color: #fff;
+            box-shadow: 0 0 20px #eee;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .main-content .specializ .skill .skill-title {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .main-content .specializ .skill .skill-content {
+            font-size: 13px;
+        }
+
+        .main-content .about {
+            margin: 50px 0;
+        }
+
+        .main-content .about .about-content .email {
+            font-weight: 700;
+            font-size: 35px;
+        }
+
+        .main-content .about .about-content .socail-link ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-content .about .about-content .socail-link ul li {
+            margin: 50px 40px;
+        }
+
+        .main-content .about .about-content .socail-link ul li a {
+            color: #999;
+            font-size: 25px;
+        }
+
+        .main-content .about .about-content .copy-right {
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container-fluid">
+        <header class="row" id="header">
+            <div class="col-8">
+                <h1>Student</h1>
+            </div>
+            <div class="col-4">
+                <nav>
+                    <ul class="justify-content-end">
+                        <li><a class="active" href="" title="">Home</a></li>
+                        <li><a href="" title="">About</a></li>
+                        <li><a href="" title="">Video</a></li>
+                        <li><a href="" title="">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="widget">
+            <div class="widget-content"></div>
+        </div>
+        <img class="shape" src="./public/icon/shape.svg" alt="">
+        <section class="main-content">
+            <div class="row">
+                <div class="col-6">
+                    <h1>Hello,</h1>
+                    <h1>I'm Charles Sin</h1>
+                    <p>Study At Feng Chia University<br> Taiwan</p>
+                </div>
+                <div class="col-6">
+                    <h3 class="title">
+                        Latest In Blog
+                    </h3>
+                    <div class="posts">
+                        <div class="post">
+                            <header class="d-flex justify-content-between">
+                                <h4 class="post-title">
+                                    Coming Soon
+                                </h4>
+                                <p class="post-date">04 / 07 / 2019</p>
+                            </header>
+                            <div class="post-content">
+                                <p>
+                                    ...
+                                </p>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <header class="d-flex justify-content-between">
+                                <h4 class="post-title">
+                                    Coming Soon
+                                </h4>
+                                <p class="post-date">04 / 07 / 2019</p>
+                            </header>
+                            <div class="post-content">
+                                <p>
+                                    ...
+                                </p>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <header class="d-flex justify-content-between">
+                                <h4 class="post-title">
+                                    Coming Soon
+                                </h4>
+                                <p class="post-date">04 / 07 / 2019</p>
+                            </header>
+                            <div class="post-content">
+                                <p>
+                                    ...
+                                </p>
+                            </div>
+                        </div>
+                        <p class="read-more">
+                            <a href="">Read more <span class="fa fa-arrow-right"></span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="specializ">
+                        <h3 class="title">
+                            Specializing In (Maybe)
+                        </h3>
+                        <div class="specializ-content">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="skill">
+                                        <h4 class="skill-title">
+                                            Web Design
+                                        </h4>
+                                        <p class="skill-content">
+                                            Lorem ipsum dolor sit amet, errem aperiri an his.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="skill">
+                                        <h4 class="skill-title">
+                                            Web Development
+                                        </h4>
+                                        <p class="skill-content">
+                                            Lorem ipsum dolor sit amet, errem aperiri an his.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="skill">
+                                        <h4 class="skill-title">
+                                            UI & UX
+                                        </h4>
+                                        <p class="skill-content">
+                                            Lorem ipsum dolor sit amet, errem aperiri an his.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-12">
+                                    <div class="skill">
+                                        <h4 class="skill-title">
+                                            Mobile Development
+                                        </h4>
+                                        <p class="skill-content">
+                                            Lorem ipsum dolor sit amet, errem aperiri an his.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="about text-center">
+                        <h3 class="title">
+                            Contact Me
+                        </h3>
+                        <div class="about-content">
+                            <h3 class="email">
+                                D0561910@mail.fcu.edu.tw
+                            </h3>
+                            <div class="socail-link">
+                                <ul>
+                                    <li>
+                                        <a href="" title="">
+                                            <span class="fa fa-facebook"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="">
+                                            <span class="fa fa-github"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" title="">
+                                            <span class="fa fa-twitter"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>

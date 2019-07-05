@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Background Image On Hover</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Tangerine', cursive;
+        }
+
+        .thing1 {
+            background-image: url(../public/images/background001.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+            transition: all 1s ease-in-out;
+            height: 100vh;
+        }
+
+        h2 {
+            text-align: center;
+            padding-top: 25%;
+            font-size: 70px;
+        }
+
+        .thing1:hover {
+            background-image: url(../public/images/water.jpg);
+            transition: all 1s ease-in-out;
+            -webkit-background-size: cover;
+            background-size: cover;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="thing1">
+        <h2>The beauty in in your mind, not in your mind</h2>
+    </div>
+</body>
+
+</html>
