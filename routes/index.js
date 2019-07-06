@@ -6,9 +6,14 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
-/* GET home page. */
+/* GET Background Image Animation page. */
 router.get('/bg_color_animation', function(req, res, next) {
   res.render('Bg_color_animation');
+});
+
+/* GET Background Image on Hover page. */
+router.get('/bg_image_onhover', function(req, res, next) {
+  res.render('Bg_image_onhover');
 });
 
 /* GET Card Slider page. */
@@ -61,6 +66,16 @@ router.get('/login_page', function(req, res, next) {
   res.render('loginpage');
 });
 
+/* GET Login Form. */
+router.get('/login_form', function(req, res, next) {
+  res.render('login_form');
+});
+
+/* GET Multi Step Form. */
+router.get('/multi_SF', function(req, res, next) {
+  res.render('multi_step_form');
+});
+
 /* GET navbar & dropdown menu page. */
 router.get('/navbar', function(req, res, next) {
   res.render('navbar&dropdownmenu');
@@ -69,6 +84,11 @@ router.get('/navbar', function(req, res, next) {
 /* GET navbar view page. */
 router.get('/navbar_view', function(req, res, next) {
   res.render('navbarview');
+});
+
+/* GET Personal Blog page. */
+router.get('/personal_blog', function(req, res, next) {
+  res.render('personal_blog');
 });
 
 /* GET Scroll Animation page. */
@@ -84,6 +104,16 @@ router.get('/sign_up', function(req, res, next) {
 /* GET Split Screen page. */
 router.get('/splitscreen', function(req, res, next) {
   res.render('splitscreen');
+});
+
+/* GET Side Nav page. */
+router.get('/side_nav', function(req, res, next) {
+  res.render('sidenav');
+});
+
+/* GET Simple Portfolio Blog page. */
+router.get('/portfolio', function(req, res, next) {
+  res.render('simpleportfolioblog');
 });
 
 /* GET Table page. */
@@ -114,6 +144,11 @@ router.get('/text_animation_4', function(req, res, next) {
 /* GET Shiny Text Animation page. */
 router.get('/validate_form', function(req, res, next) {
   res.render('validateform');
+});
+
+/* GET Vertical Menu page. */
+router.get('/vertical_menu', function(req, res, next) {
+  res.render('vertical_menu');
 });
 
 /* GET Youtube Player page. */
