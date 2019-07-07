@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #Calcul {
+            margin: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        fieldset {
+            width: 694px;
+            overflow: hidden;
+            padding-right: 45px;
+            padding-left: 45px;
+            padding-top: 30px;
+            padding-bottom: 35px;
+            box-sizing: border-box;
+            border-radius: 16px;
+        }
+
+        #result {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        #centre,
+        #right {
+            padding-left: 14px;
+        }
+
+        .bouton {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 4px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: white;
+            color: #2a2d32;
+            font-weight: bold;
+            font-size: 100%;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #equal {
+            width: 100%;
+            height: 100%;
+            padding: 40px 20px;
+        }
+
+        .bouton:hover {
+            background-color: #2a2d32;
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('/images/backg.jpg');">
+    <div id="Calcul" align="center">
+        <fieldset align="center">
+            <input type="text" id="result" placeholder="0" readonly />
+            <table align="left" id="left">
+                <tr>
+                    <td><input type="submit" id="sept" value="7" class="bouton" onclick="Number(this.value)" /></td>
+                    <td><input type="submit" value="8" class="bouton" onclick="Number(this.value)" /></td>
+                    <td><input type="submit" value="9" class="bouton" onclick="Number(this.value)" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="4" class="bouton" onclick="Number(this.value)" /></td>
+                    <td><input type="submit" value="5" class="bouton" onclick="Number(this.value)" /></td>
+                    <td><input type="submit" value="6" class="bouton" onclick="Number(this.value)" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="1" class="bouton" onclick="Number(this.value)" /></td>
+                    <td><input type="submit" value="2" class="bouton" onclick="Number(this.value)" /></td>
+                    <td><input type="submit" value="3" class="bouton" onclick="Number(this.value)" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="." class="bouton" onclick="Number(this.value)" /></td>
+                    <td colspan="2"><input type="submit" value="0" class="bouton" onclick="Number(this.value)" /></td>
+                </tr>
+            </table>
+
+            <table align="left" id="centre">
+                <tr>
+                    <td><input type="submit" value="÷" class="bouton" onclick="Operator(this.value)" /></td>
+                    <td><input type="submit" value="⇚" class="bouton" onclick="Supp()" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="×" class="bouton" onclick="Operator(this.value)" /></td>
+                    <td><input type="submit" value="AC" class="bouton" onclick="SuppAll()" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="-" class="bouton" onclick="Operator(this.value)" /></td>
+                    <td rowspan="2"><input type="submit" value="=" class="bouton" id="equal" onclick="Egal()" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="+" class="bouton" onclick="Operator(this.value)" /></td>
+                </tr>
+            </table>
+
+            <table align="left" id="right">
+                <tr>
+                    <td><input type="submit" value="x²" class="bouton" onclick="Exp2()" /></td>
+                    <td><input type="submit" value="xⁿ" class="bouton" onclick="Operator(this.value)" /></td>
+                    <td><input type="submit" value="√x" class="bouton" onclick="Racine()" /></td>
+                    <td><input type="submit" value="x!" class="bouton" onclick="Facto()" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="(" class="bouton" onclick="Number(this.value)" /></td>
+                    <td><input type="submit" value=")" class="bouton" onclick="Number(this.value)" /></td>
+                    <td><input type="submit" value="(-)" class="bouton" onclick="Operator(this.value)" /></td>
+                    <td><input type="submit" value="|x|" class="bouton" onclick="Abs()" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="%" class="bouton" onclick="Operator(this.value)" /></td>
+                    <td><input type="submit" value="cos" class="bouton" onclick="Cos()" /></td>
+                    <td><input type="submit" value="sin" class="bouton" onclick="Sin()" /></td>
+                    <td><input type="submit" value="tan" class="bouton" onclick="Tan()" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="log" class="bouton" onclick="Log()" /></td>
+                    <td colspan="2"><input type="submit" value="eⁿ" class="bouton" onclick="Expo()" /></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+    <script>
+        function Number(value) {
+            document.getElementById('result').value = document.getElementById('result').value + value;
+        }
+        function Operator(value) {
+            switch (value) {
+                case "+":
+                    o = "+";
+                    break;
+                case "-":
+                    o = "-";
+                    break;
+                case "(-)":
+                    o = "-";
+                    break;
+                case "×":
+                    o = "*";
+                    break;
+                case "÷":
+                    o = "/";
+                    break;
+                case "%":
+                    o = "%";
+                    break;
+                case "xⁿ":
+                    o = "^";
+                    break;
+            }
+            document.getElementById("result").value = document.getElementById("result").value + " " + o + " ";
+        }
+        function Egal() {
+            var v = document.getElementById("result").value;
+            document.getElementById("result").value = "";
+            var o = v.indexOf("^");
+            if (o > -1) {
+                var p1 = v.substring(0, o - 1);
+                var p2 = v.substring(o + 1, v.length);
+                pow1 = parseInt(p1);
+                pow2 = parseInt(p2);
+                res1 = Math.pow(pow1, pow2);
+                res = res1.toString();
+                document.getElementById("result").value = res;
+            }
+            else {
+                var res = eval(v);
+                document.getElementById("result").value = res;
+            }
+        }
+        function Supp() {
+            var res = document.getElementById("result").value;
+            var l = res.length;
+            var x = l - 1;
+            if (res.charAt(l - 1 == " ")) {
+                x = l - 1;
+            }
+            res = res.substring(0, x);
+            document.getElementById("result").value = res;
+        }
+        function SuppAll() {
+            document.getElementById("result").value = "";
+        }
+        function Exp2() {
+            var v = document.getElementById('result').value;
+            v = parseInt(v);
+            var exp = v * v;
+            res = exp.toString();
+            document.getElementById('result').value = res;
+        }
+        function Abs() {
+            var x = document.getElementById('result').value;
+            v = x.replace(/ /g, '');
+            v = parseInt(v);
+            if (v >= 0) {
+                exp = v;
+            }
+            else {
+                exp = v * (-1);
+            }
+            res = exp.toString();
+            document.getElementById('result').value = res;
+        }
+        function Racine() {
+            var x = document.getElementById('result').value;
+            v = x.replace(/ /g, '');
+            v = parseInt(v);
+            exp = Math.sqrt(v);
+            res = exp.toString();
+            document.getElementById('result').value = res;
+        }
+        function Cos() {
+            var x = document.getElementById('result').value;
+            v = x.replace(/ /g, '');
+            v = parseInt(v);
+            exp = Math.cos(v);
+            res = exp.toString();
+            document.getElementById('result').value = res;
+        }
+        function Sin() {
+            var x = document.getElementById('result').value;
+            v = x.replace(/ /g, '');
+            v = parseInt(v);
+            exp = Math.sin(v);
+            res = exp.toString();
+            document.getElementById('result').value = res;
+        }
+        function Tan() {
+            var x = document.getElementById('result').value;
+            v = x.replace(/ /g, '');
+            v = parseInt(v);
+            exp = Math.tan(v);
+            res = exp.toString();
+            document.getElementById('result').value = res;
+        }
+        function Log() {
+            var x = document.getElementById('result').value;
+            v = x.replace(/ /g, '');
+            v = parseInt(v);
+            exp = Math.log(v);
+            res = exp.toString();
+            document.getElementById('result').value = res;
+        }
+        function Expo() {
+            var x = document.getElementById('result').value;
+            v = x.replace(/ /g, '');
+            v = parseInt(v);
+            exp = Math.exp(v);
+            res = exp.toString();
+            document.getElementById('result').value = res;
+        }
+        function factorial(x) {
+            if (x === 0) {
+                return 1;
+            }
+            return x * factorial(x - 1);
+        }
+        function Facto() {
+            var x = document.getElementById('result').value;
+            exp = parseInt(x);
+            exp = factorial(x);
+            res = exp.toString();
+            document.getElementById('result').value = res;
+        }
+    </script>
+</body>
+
+</html>

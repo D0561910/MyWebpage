@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clock Example</title>
+    <style>
+        body {
+            background: #ffc98b;
+        }
+
+        #circular-clock {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            -webkit-transform: translate(-50%);
+            -moz-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+            -o-transform: translate(-50%);
+            transform: translate(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="circular-clock"></div>
+    <script src="/javascripts/jquery-3.4.1.js"></script>
+    <script src="/javascripts/radialIndicator.min.js"></script>
+    <script src="/javascripts/angular.radialIndicator.js"></script>
+    <script>
+        var radialObj = radialIndicator('#circular-clock', {
+            radius: 250,
+            barWidth: 20,
+            barColor: '#FF0000',
+            minValue: 0,
+            maxValue: 60,
+            fontWeight: 'normal',
+            roundCorner: true,
+            format: function (value) {
+                var date = new Date();
+                return date.getHours() + ':' + date.getMinutes();
+            }
+        });
+
+        setInterval(function () {
+            radialObj.value(new Date().getSeconds() + 1);
+        }, 1000);
+    </script>
+</body>
+
+</html>

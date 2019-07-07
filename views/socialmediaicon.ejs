@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Social Media Icon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background: #000;
+        }
+
+        .wrapper {
+            width: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .single-icon{
+            position: relative;
+            overflow: hidden;
+            background: #262626;
+            transition: .9s;
+            float: left;
+            margin-right: 45px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .single-icon:hover{
+            box-shadow: 0 0 35px #ffc400;
+            text-shadow: 0 0 5px #ffc400;
+        }
+        .single-icon i{
+            position: absolute;
+            font-size: 30px;
+            line-height: 80px;
+            color: #fff;
+            display: block;
+            text-align: center;
+            transition-property: left, opacity;
+            transition-duration: 0.4s;
+        }
+        .single-icon:hover i{
+            color: #ffc400
+        }
+        .single-icon .icon-one{
+            left: -100%;
+        }
+        .single-icon .icon-two{
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .single-icon:hover .icon-two{
+            left: 150%;
+            opacity: 0;
+        }
+        .single-icon:hover .icon-one{
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 1;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="single-icon">
+            <i class="fa fa-share icon-one"></i>
+            <i class="fa fa-facebook icon-two"></i>
+        </div>
+        <div class="single-icon">
+            <i class="fa fa-share-alt icon-one"></i>
+            <i class="fa fa-linkedin icon-two"></i>
+        </div>
+        <div class="single-icon">
+            <i class="fa fa-share icon-one"></i>
+            <i class="fa fa-twitter icon-two"></i>
+        </div>
+        <div class="single-icon">
+            <i class="fa fa-share-alt icon-one"></i>
+            <i class="fa fa-google-plus icon-two"></i>
+        </div>
+    </div>
+</body>
+
+</html>

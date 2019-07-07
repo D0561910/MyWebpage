@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Time JS</title>
+    <style>
+        body {
+            color: #fff;
+            background-image: url(/images/bg004.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            height: 100vh;
+        }
+
+        body:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        .container {
+            text-align: center;
+            display: table;
+            margin: auto;
+            padding-top: 5%;
+            width: 1000px;
+        }
+
+        .content-area {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .content-area h2 {
+            font-size: 40px;
+            color: #7E9680;
+            text-transform: uppercase;
+            font-family: Audiowide;
+        }
+
+        .content-area p {
+            font-size: 30px;
+            padding: 0 15%;
+            font-family: Poppins;
+        }
+
+        .timer {
+            width: 450px;
+            margin: 0 auto;
+            height: 110px;
+            font-family: Audiowide;
+            font-size: 80px;
+        }
+
+        .jst-hours {
+            float: left;
+        }
+
+        .jst-minutes {
+            float: left;
+        }
+
+        .jst-seconds {
+            float: left;
+        }
+
+        .in-area {
+            display: block;
+        }
+
+        .in-area input {
+            width: 65%;
+            background: #4a4a4a;
+            bottom: 0;
+            padding: 15px;
+            border-radius: 25px;
+            color: #fff;
+            text-transform: capitalize;
+            font-size: 18px;
+        }
+
+        .in-area button {
+            border: 0;
+            background: #fa897b;
+            color: #fff;
+            padding: 15px 30px;
+            margin-left: 15px;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content-area">
+            <h2>Our Website is Almost Ready</h2>
+            <p>We are launching within ... </p>
+            <h1 class="timer" data-minutes-left=4800></h1>
+            <p class="in-area">
+                <input type="email" placeholder="enter your email">
+                <button>Get Notified</button>
+            </p>
+        </div>
+    </div>
+    <script src="/javascripts/jquery-3.4.1.js"></script>
+    <script src="/javascripts/jquery.simple.timer.js"></script>
+    <script>
+        $('.timer').startTimer();
+    </script>
+</body>
+
+</html>

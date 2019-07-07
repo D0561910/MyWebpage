@@ -8,17 +8,32 @@ router.get('/', function(req, res, next) {
 
 /* GET Background Image Animation page. */
 router.get('/bg_color_animation', function(req, res, next) {
-  res.render('Bg_color_animation');
+  res.render('bg_color_animation');
 });
 
 /* GET Background Image on Hover page. */
 router.get('/bg_image_onhover', function(req, res, next) {
-  res.render('Bg_image_onhover');
+  res.render('bg_image_onhover');
+});
+
+/* GET Background Image on Hover page. */
+router.get('/bg_video', function(req, res, next) {
+  res.render('bg_video');
 });
 
 /* GET Card Slider page. */
 router.get('/cardslider', function(req, res, next) {
   res.render('cardslider');
+});
+
+/* GET CLock Example page. */
+router.get('/clock', function(req, res, next) {
+  res.render('clock_example');
+});
+
+/* GET Calculator page. */
+router.get('/calculator', function(req, res, next) {
+  res.render('calculator');
 });
 
 /* GET Day & Night Mode page. */
@@ -71,6 +86,10 @@ router.get('/login_form', function(req, res, next) {
   res.render('login_form');
 });
 
+/* GET Login Form. */
+router.get('/loding', function(req, res, next) {
+  res.render('lodinganimation');
+});
 /* GET Multi Step Form. */
 router.get('/multi_SF', function(req, res, next) {
   res.render('multi_step_form');
@@ -91,6 +110,21 @@ router.get('/personal_blog', function(req, res, next) {
   res.render('personal_blog');
 });
 
+/* GET Pricing Table page. */
+router.get('/pricingtable', function(req, res, next) {
+  res.render('pricingtable');
+});
+
+/* GET Simple Portfolio Blog page. */
+router.get('/portfolio', function(req, res, next) {
+  res.render('simpleportfolioblog');
+});
+
+/* GET Simple Portfolio Blog page. */
+router.get('/socialmediaicon', function(req, res, next) {
+  res.render('socialmediaicon');
+});
+
 /* GET Scroll Animation page. */
 router.get('/scrollanimation', function(req, res, next) {
   res.render('scrollanimation');
@@ -109,11 +143,6 @@ router.get('/splitscreen', function(req, res, next) {
 /* GET Side Nav page. */
 router.get('/side_nav', function(req, res, next) {
   res.render('sidenav');
-});
-
-/* GET Simple Portfolio Blog page. */
-router.get('/portfolio', function(req, res, next) {
-  res.render('simpleportfolioblog');
 });
 
 /* GET Table page. */
@@ -139,6 +168,11 @@ router.get('/text_animation_3', function(req, res, next) {
 /* GET Text Rotate Animation page. */
 router.get('/text_animation_4', function(req, res, next) {
   res.render('textanimation4');
+});
+
+/* GET Timer JS Animation page. */
+router.get('/timer', function(req, res, next) {
+  res.render('timerjs');
 });
 
 /* GET Shiny Text Animation page. */
