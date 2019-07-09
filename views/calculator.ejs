@@ -70,10 +70,34 @@
             background-color: #2a2d32;
             color: white;
         }
+
+        .back-btn {
+            background: linear-gradient(to right, #6065D9, #17D7FA);
+            border: none;
+            border-radius: 100px;
+            font-size: 18px;
+            font-weight: 300;
+            color: #fff;
+            display: block;
+            width: 150px;
+            height: 40px;
+            margin: 0 auto;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .btn-area {
+            margin-left: -80%;
+            margin-top: 50px;
+            margin-bottom: -5%;
+        }
     </style>
 </head>
 
 <body style="background-image: url('/images/backg.jpg');">
+    <div class="btn-area">
+        <button class="btn" type="button" onclick="location.href='/'">Back to Home</button>
+    </div>
     <div id="Calcul" align="center">
         <fieldset align="center">
             <input type="text" id="result" placeholder="0" readonly />

@@ -41,6 +41,11 @@ router.get('/B&W_Mode', function(req, res, next) {
   res.render('day&nightmode');
 });
 
+/* GET Date Picker page. */
+router.get('/datepicker', function(req, res, next) {
+  res.render('datepickerExample');
+});
+
 /* GET Dropdown Menu page. */
 router.get('/dropdown_menu_1', function(req, res, next) {
   res.render('dropdownmenu1');

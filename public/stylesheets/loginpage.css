@@ -95,6 +95,16 @@ button {
     cursor: pointer;
 }
 
+.btn-area {
+    margin-left: -80%;
+    margin-top: 50px;
+    margin-bottom: -5%;
+}
+
+.btn {
+    width: 150px;
+}
+
 input {
     border: none;
     display: block;
