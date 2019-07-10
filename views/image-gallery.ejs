@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Gallery</title>
+    <style>
+        .wrapper {
+            text-align: center;
+            font-size: 30px;
+            font-family: Audiowide;
+        }
+
+        .img-area {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .single-img {
+            padding: 0 20px 20px;
+        }
+
+        img:hover {
+            opacity: .5;
+            transition: .9s;
+        }
+
+        .back-btn {
+            background: linear-gradient(to right, #6065D9, #17D7FA);
+            border: none;
+            border-radius: 100px;
+            font-size: 18px;
+            font-weight: 300;
+            color: #fff;
+            display: block;
+            width: 150px;
+            height: 40px;
+            margin: 0 auto;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .btn-area {
+            margin-left: -80%;
+            margin-top: 50px;
+            margin-bottom: -5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn-area">
+        <button class="back-btn" type="button" onclick="location.href='/'">Back to Home</button>
+    </div>
+    <div class="wrapper">
+        <h1>Image Gallery</h1>
+        <div class="img-area">
+            <div class="single-img"><img src="./images/5.jpg" alt=""></div>
+            <div class="single-img"><img src="./images/5.jpg" alt=""></div>
+            <div class="single-img"><img src="./images/5.jpg" alt=""></div>
+            <div class="single-img"><img src="./images/5.jpg" alt=""></div>
+            <div class="single-img"><img src="./images/5.jpg" alt=""></div>
+            <div class="single-img"><img src="./images/5.jpg" alt=""></div>
+        </div>
+    </div>
+</body>
+
+</html>

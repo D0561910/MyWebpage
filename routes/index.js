@@ -76,6 +76,11 @@ router.get('/hovereffect', function(req, res, next) {
   res.render('hovereffect');
 });
 
+/* GET Image Gallery page. */
+router.get('/img_gallery', function(req, res, next) {
+  res.render('image-gallery');
+});
+
 /* GET list page. */
 router.get('/list', function(req, res, next) {
   res.render('list');
@@ -95,6 +100,11 @@ router.get('/login_form', function(req, res, next) {
 router.get('/loding', function(req, res, next) {
   res.render('lodinganimation');
 });
+/* GET Login Form. */
+router.get('/load_image', function(req, res, next) {
+  res.render('loadImage');
+});
+
 /* GET Multi Step Form. */
 router.get('/multi_SF', function(req, res, next) {
   res.render('multi_step_form');
@@ -126,6 +136,11 @@ router.get('/portfolio', function(req, res, next) {
 });
 
 /* GET Simple Portfolio Blog page. */
+router.get('/phone_UI', function(req, res, next) {
+  res.render('phoneUI');
+});
+
+/* GET Simple Portfolio Blog page. */
 router.get('/socialmediaicon', function(req, res, next) {
   res.render('socialmediaicon');
 });
@@ -133,6 +148,11 @@ router.get('/socialmediaicon', function(req, res, next) {
 /* GET Scroll Animation page. */
 router.get('/scrollanimation', function(req, res, next) {
   res.render('scrollanimation');
+});
+
+/* GET Search Button page. */
+router.get('/searchbtn', function(req, res, next) {
+  res.render('search_btn');
 });
 
 /* GET Sign Up page. */
@@ -148,6 +168,11 @@ router.get('/splitscreen', function(req, res, next) {
 /* GET Side Nav page. */
 router.get('/side_nav', function(req, res, next) {
   res.render('sidenav');
+});
+
+/* GET Sunrise page. */
+router.get('/sunrise', function(req, res, next) {
+  res.render('sunrise');
 });
 
 /* GET Table page. */
@@ -173,6 +198,11 @@ router.get('/text_animation_3', function(req, res, next) {
 /* GET Text Rotate Animation page. */
 router.get('/text_animation_4', function(req, res, next) {
   res.render('textanimation4');
+});
+
+/* GET Team_Section page. */
+router.get('/team_section', function(req, res, next) {
+  res.render('team_Section');
 });
 
 /* GET Timer JS Animation page. */

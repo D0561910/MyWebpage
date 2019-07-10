@@ -50,10 +50,34 @@
             animation-name: fadeIn;
             animation-duration: 3s;
         }
+
+        .back-btn {
+            background: linear-gradient(to right, #6065D9, #17D7FA);
+            border: none;
+            border-radius: 100px;
+            font-size: 18px;
+            font-weight: 300;
+            color: #fff;
+            display: block;
+            width: 150px;
+            height: 40px;
+            margin: 0 auto;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .btn-area {
+            margin-left: -70%;
+            margin-top: 10px;
+            margin-bottom: -5%;
+        }
     </style>
 </head>
 
 <body>
+    <div class="btn-area">
+        <button class="back-btn" type="button" onclick="location.href='/'">Back to Home</button>
+    </div>
     <h1>Lazy Loading Images</h1>
 
     <!-- Images Container -->

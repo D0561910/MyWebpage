@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Team Section</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background: #262626;
+        }
+
+        .team-area {
+            padding: 60px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            font-size: 65px;
+            font-family: bignoodletitling;
+            letter-spacing: 5px;
+        }
+
+        .team-area .card {
+            border: none;
+            background: #ffffff;
+        }
+
+        .img-area {
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        .team-single:hover .side-two {
+            transform: rotateY(0deg);
+            border-radius: .25rem;
+        }
+
+        .team-single:hover .side-one {
+            transform: rotateY(180deg);
+        }
+
+        .content-area {
+            transform: perspective(1000px);
+            transition: 1s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .side-one {
+            position: relative;
+            transform: rotateY(0deg);
+            z-index: 2;
+            margin-bottom: 30px;
+        }
+
+        .side-two {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: white;
+            transform: rotateY(-180deg);
+        }
+
+        .side-one,
+        .side-two {
+            backface-visibility: hidden;
+            transition: 1s;
+            transform-style: preserve-3d;
+        }
+
+        .side-one .card,
+        .side-two .card {
+            min-height: 312px;
+        }
+
+        .side-two .card a {
+            font-size: 18px;
+            color: brown !important;
+        }
+
+        h4 {
+            color: brown !important;
+            font-family: BigNoodleTitling;
+            letter-spacing: 5px;
+            font-size: 25px;
+        }
+
+        p {
+            font-family: Merienda;
+        }
+
+        .side-one .card .card-body img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .back-btn {
+            background: linear-gradient(to right, #6065D9, #17D7FA);
+            border: none;
+            border-radius: 100px;
+            font-size: 18px;
+            font-weight: 300;
+            color: #fff;
+            display: block;
+            width: 150px;
+            height: 40px;
+            margin: 0 auto;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .btn-area {
+            margin-left: -80%;
+            margin-top: 50px;
+            margin-bottom: -5%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="btn-area">
+        <button class="back-btn" type="button" onclick="location.href='/'">Back to Home</button>
+    </div>
+    <section class="team-area">
+        <div class="container">
+            <h5 class="section-heading">Team Members</h5>
+            <div class="row">
+
+                <!-- Team member First -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="team-single">
+                        <div class="content-area">
+                            <div class="side-one">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="img-area">
+                                            <img src="./images/people007.jpg" alt=""></div>
+                                        <h4>Charles Sin</h4>
+                                        <p>Software Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-two">
+                                <div class="card">
+                                    <div class="card-body text-center mt-4">
+                                        <h4>Charles Sin</h4>
+                                        <p>Coming Soon ...</p>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <a class="social-icon" target="_blank" href="#">
+                                                    <i class="fa fa-youtube"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="social-icon" target="_blank" href="#">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="social-icon" target="_blank" href="#">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="social-icon" target="_blank" href="#">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./Team member First -->
+
+                <!-- Team member Two -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="team-single">
+                        <div class="content-area">
+                            <div class="side-one">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="img-area">
+                                            <img src="./images/people002.jpg" alt=""></div>
+                                        <h4>Chris Bob</h4>
+                                        <p>Internet & Security</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-two">
+                                <div class="card">
+                                    <div class="card-body text-center mt-4">
+                                        <h4>Chris Bob</h4>
+                                        <p>Coming Soon ...</p>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <a class="social-icon" target="_blank" href="#">
+                                                    <i class="fa fa-youtube"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="social-icon" target="_blank" href="#">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="social-icon" target="_blank" href="#">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="social-icon" target="_blank" href="#">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./Team member -->
+
+                <!-- Team member Third -->
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="team-single">
+                        <div class="content-area">
+                            <div class="side-one">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="img-area">
+                                            <img src="./images/02.png" alt="">
+                                        </div>
+                                        <h4>Coming Soon</h4>
+                                        <p>Extreme Programming</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-two">
+                                <div class="card">
+                                    <div class="card-body text-center mt-4">
+                                        <h4>Coming Soon</h4>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, eum
+                                            expedita facere incidunt inventore mollitia nesciunt nihil quam repudiandae
+                                            velit?</p>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <a class="social-icon" target="_blank" href="#">
+                                                    <i class="fa fa-youtube"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="social-icon" target="_blank" href="#">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="social-icon" target="_blank" href="#">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="social-icon" target="_blank" href="#">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./Team member Three -->
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
