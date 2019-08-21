@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu Hover</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: poppins;
+            background-image: url(https://i.postimg.cc/rmVqXyCk/1.jpg);
+            background-size: cover;
+            background-position: center center;
+            height: 100vh;
+        }
+
+        .menu-area ul {
+            padding: 0;
+            display: flex;
+            float: right;
+        }
+
+        .menu-area ul li {
+            list-style-type: none;
+            padding: 10px 20px;
+        }
+
+        .menu-area ul li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 20px;
+            color: #fff;
+            position: relative;
+            font-weight: bold;
+        }
+
+        .menu-area ul li:hover a {
+            color: #333;
+        }
+
+        .menu-area ul li a:before {
+            content: '[';
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            transition: .6s;
+        }
+
+        .menu-area ul li a:after {
+            content: ']';
+            position: absolute;
+            right: 0;
+            opacity: 0;
+            transition: .6s;
+        }
+
+        .menu-area ul li:hover a:before {
+            left: -15px;
+            opacity: 1;
+        }
+
+        .menu-area ul li:hover a:after {
+            right: -15px;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-area">
+        <ul>
+            <li><a href="/">Back to Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

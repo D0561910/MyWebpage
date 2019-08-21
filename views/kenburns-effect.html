@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kenburns Effect</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .img-area {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img-area img {
+            width: 100%;
+            animation: animate 40s ease;
+            position: absolute;
+        }
+
+        .wrapper-text {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 500px;
+            height: 200px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+            padding: 3%;
+        }
+
+        .wrapper-text h2 {
+            font-family: poppins;
+            text-transform: uppercase;
+            font-size: 38px;
+            margin: 10px 0;
+        }
+
+        .wrapper-text p {
+            font-family: roboto;
+            text-transform: uppercase;
+            line-height: 28px;
+        }
+
+        .wrapper-text a {
+            background: tomato;
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 15px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        @-webkit-keyframes animate {
+            0% {
+                -webkit-transform-origin: bottom right;
+                -moz-transform-origin: bottom right;
+                -ms-transform-origin: bottom right;
+                -o-transform-origin: bottom right;
+                transform-origin: bottom right;
+                transform: scale(1.0);
+            }
+
+            100% {
+                transform: scale(1.3);
+            }
+        }
+        /* ignore the code below */
+        .link-area {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 15px;
+            border-radius: 40px;
+            background: tomato;
+        }
+
+        .link-area a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-area">
+        <img src="../public/images/bg030.jpg">
+    </div>
+
+    <div class="wrapper-text">
+        <h2>Welcome to the Website</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque impedit minima nisi porro ut. Doloremque!</p>
+        <a href="#">Contact Us</a>
+    </div>
+
+    <!--- ignore the code below-->
+
+    <div class="link-area">
+        <a href="https://www.youtube.com/channel/UCki4IDK86E6_pDtptmsslow" target="_blank">Click for More</a>
+    </div>
+</body>
+
+</html>

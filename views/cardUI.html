@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, minimal-ui initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>卡片UI</title>
+
+    <style>
+        @charset "UTF-8";
+
+        html {
+            background: #fff3e0;
+        }
+
+        body {
+            font-family: 微軟正黑體, Meiryo, sans-serif;
+        }
+
+        h1 {
+            font-size: 32px;
+            line-height: 1.5;
+            margin: 15px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        section p {
+            color: #777;
+            margin: 10px;
+        }
+
+        .card:after {
+            display: block;
+            height: 0;
+            clear: both;
+        }
+
+        .card .box {
+            float: left;
+            width: 43%;
+            background: #fff;
+            border-radius: 6px;
+            box-sizing: border-box;
+            box-shadow: 0 1px 3px 0 #e0e0e0;
+        }
+
+        .card .box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px 6px 0 0;
+        }
+
+        /* theme-card */
+        .theme-card .box {
+            margin-left: 15px;
+            margin-bottom: 15px;
+        }
+
+        .theme-card .inner {
+            padding: 5px;
+        }
+
+        .theme-card .title {
+            color: #212121;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .theme-card .comment {
+            color: #757575;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .theme-card .more {
+            font-size: 12px;
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        .theme-card .more a {
+            color: #e65100;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>卡片 UI Sample</h1>
+    <section>
+    </section>
+
+    <div class="card theme-card">
+        <div class="box">
+            <img src="../public/images/tutorial/01.jpg" />
+            <div class="inner">
+                <div class="js-heightLine-1">
+                    <p class="title">火影忍者第一集</p>
+                    <p class="comment">離開木葉忍者村已經兩年半的鳴人終於回來了。...</p>
+                </div>
+                <p class="more"><a href="#">更多...</a></p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="../public/images/tutorial/02.jpg" />
+            <div class="inner">
+                <div class="js-heightLine-1">
+                    <p class="title">火影忍者第二集</p>
+                    <p class="comment">就在綱手準備驗收鳴人與小櫻這段時間的修練成果，...</p>
+                </div>
+                <p class="more"><a href="#">更多...</a></p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="../public/images/tutorial/03.jpg" />
+            <div class="inner">
+                <div class="js-heightLine-2">
+                    <p class="title">火影忍者第三集</p>
+                    <p class="comment">鳴人與小櫻的修練成果令卡卡西眼睛為之一亮，甚至...</p>
+                </div>
+                <p class="more"><a href="#">更多...</a></p>
+            </div>
+        </div>
+        <div class="box">
+
+            <img src="../public/images/tutorial/04.jpg" />
+            <div class="inner">
+                <div class="js-heightLine-2">
+                    <p class="title">火影忍者第四集</p>
+                    <p class="comment">曉的目標原來是已經當上風影的我愛羅。在地達羅的...</p>
+                </div>
+                <p class="more"><a href="#">更多...</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../public/images/tutorial/common/js/jquery-2.1.1.min.js"></script>
+    <script src="../public/images/tutorial/jquery.heightLine.js"></script>
+    <script>
+        $(function () {
+            var column = 2,
+                roop = Math.ceil($(".card .box").length / column),
+                i;
+            for (i = 0; i < roop; i++) {
+                $(".js-heightLine-" + (i + 1)).heightLine();
+            }
+            $(".box").hide().fadeIn(2000);
+        });
+    </script>
+</body>
+
+</html>

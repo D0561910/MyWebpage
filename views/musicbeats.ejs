@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Beats Example</title>
+    <style>
+        body {
+            background: linear-gradient(to left, #B1E0AD, #2EB2C9);
+        }
+
+        .wrapper {
+            width: 500px;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        div {
+            width: 30px;
+            height: 60px;
+            animation-iteration-count: infinite;
+            animation-iteration-function: linear;
+            position: fixed;
+        }
+
+        div.line1 {
+            background-color: #787878;
+            animation: animate1 1.9s linear infinite;
+            top: 200px;
+            left: 60px;
+        }
+
+        div.line2 {
+            background-color: #787878;
+            animation: animate2 2.1s linear infinite;
+            top: 200px;
+            left: 95px;
+        }
+
+        div.line3 {
+            background-color: #787878;
+            animation: animate3 2.3s linear infinite;
+            top: 200px;
+            left: 130px;
+        }
+
+        div.line4 {
+            background-color: #787878;
+            animation: animate4 1.4s linear infinite;
+            top: 200px;
+            left: 165px;
+        }
+
+        div.line5 {
+            background-color: #787878;
+            animation: animate5 1.7s linear infinite;
+            top: 200px;
+            left: 200px;
+        }
+
+        div.line6 {
+            background-color: #787878;
+            animation: animate6 2.0s linear infinite;
+            top: 200px;
+            left: 235px;
+        }
+
+        div.line7 {
+            background-color: #787878;
+            animation: animate7 1.8s linear infinite;
+            top: 200px;
+            left: 270px;
+        }
+
+        @keyframes animate1 {
+            50% {
+                background-color: #000;
+                top: 100px;
+                height: 160px;
+            }
+        }
+
+        @keyframes animate2 {
+            50% {
+                background-color: #000;
+                top: 50px;
+                height: 210px;
+            }
+        }
+
+        @keyframes animate3 {
+            50% {
+                background-color: #000;
+                top: 10px;
+                height: 250px;
+            }
+        }
+
+        @keyframes animate4 {
+            50% {
+                background-color: #000;
+                top: 100px;
+                height: 160px;
+            }
+        }
+
+        @keyframes animate5 {
+            50% {
+                background-color: #000;
+                top: 50px;
+                height: 210px;
+            }
+        }
+
+        @keyframes animate6 {
+            50% {
+                background-color: #000;
+                top: 150px;
+                height: 110px;
+            }
+        }
+
+        @keyframes animate7 {
+            50% {
+                background-color: #000;
+                top: 50px;
+                height: 210px;
+            }
+        }
+
+        .back-btn {
+            background: linear-gradient(to right, #6065D9, #17D7FA);
+            border: none;
+            border-radius: 100px;
+            font-size: 18px;
+            font-weight: 300;
+            color: #fff;
+            display: block;
+            width: 150px;
+            height: 40px;
+            margin: 0 auto;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .btn-area {
+            margin-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn-area">
+        <button class="back-btn" type="button" onclick="location.href='/'">Back to Home</button>
+    </div>
+    <div class="wrapper">
+        <div class="line1">
+        </div>
+        <div class="line2">
+        </div>
+        <div class="line3">
+        </div>
+        <div class="line4">
+        </div>
+        <div class="line5">
+        </div>
+        <div class="line6">
+        </div>
+        <div class="line7">
+        </div>
+    </div>
+
+</body>
+
+</html>

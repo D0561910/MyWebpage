@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Split Screen Animation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .split {
+            width: 100%;
+            height: 100%;
+        }
+
+        #img-one {
+            background: url("https://i.postimg.cc/d0fPCs73/1.jpg");
+            background-attachment: fixed;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        #img-two {
+            background: url("https://i.postimg.cc/ZnhQPCJb/2.jpg");
+            background-attachment: fixed;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .gutter {
+            cursor: ew-resize;
+            height: 100%;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="split" id="img-one">
+        </div>
+        <div class="split" id="img-two">
+        </div>
+    </div>
+    <script src="../public/javascripts/split.min.js"></script>
+    <script>
+        Split(['#img-one', '#img-two']);
+    </script>
+</body>
+
+</html>

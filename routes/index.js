@@ -110,6 +110,16 @@ router.get('/multi_SF', function(req, res, next) {
   res.render('multi_step_form');
 });
 
+/* GET Menu Hover Form. */
+router.get('/menuhover', function(req, res, next) {
+  res.render('menuhover');
+});
+
+/* GET Menu Hover Form. */
+router.get('/musicbeats', function(req, res, next) {
+  res.render('musicbeats');
+});
+
 /* GET navbar & dropdown menu page. */
 router.get('/navbar', function(req, res, next) {
   res.render('navbar&dropdownmenu');
@@ -218,6 +228,11 @@ router.get('/validate_form', function(req, res, next) {
 /* GET Vertical Menu page. */
 router.get('/vertical_menu', function(req, res, next) {
   res.render('vertical_menu');
+});
+
+/* GET Water Ripple page. */
+router.get('/waterripple', function(req, res, next) {
+  res.render('waterripple');
 });
 
 /* GET Youtube Player page. */
