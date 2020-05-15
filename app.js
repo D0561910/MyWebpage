@@ -23,7 +23,7 @@ app.use('/main', indexRouter);
 app.use('/users', usersRouter);
 
 app.get('/', (req,res)=>{
-  res.render('google7d0f138ca80fb975');
+  res.send('google7d0f138ca80fb975.html');
 })
 
 // catch 404 and forward to error handler
