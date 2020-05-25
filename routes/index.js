@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 /* GET Background Image Animation page. */
 router.get('/bg_color_animation', function(req, res, next) {
-  res.render('bg_color_animation');
+  res.render('Bg_color_animation');
 });
 
 /* GET Background Image on Hover page. */
