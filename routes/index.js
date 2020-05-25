@@ -18,7 +18,7 @@ router.get('/bg_image_onhover', (req, res, next) => {
 
 /* GET Background Image on Hover page. */
 router.get('/bg_video', (req, res, next) => {
-  res.render('Bg_video');
+  res.render('bg_video');
 });
 
 /* GET Card Slider page. */
