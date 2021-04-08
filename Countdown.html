@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year Countdown</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: #ff4e2b;
+            display: flex;
+        }
+
+        .container .imgBx {
+            position: relative;
+            width: 500px;
+            height: 100%;
+            background: url('./pexels-pat-whelen-5614594.jpg');
+            background-size: cover;
+        }
+
+        .container .countdownBx {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: calc(100% - 500px);
+        }
+
+        .container .countdownBx h2 {
+            text-align: center;
+            font-size: 1.5em;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 500;
+            line-height: 4em;
+        }
+
+        .container .countdownBx h2 span {
+            font-size: 6em;
+            font-weight: 700;
+        }
+
+        .container .countdownBx h2 span i {
+            font-style: initial;
+            color: #ff0;
+        }
+
+        .container .countdownBx .countdown {
+            margin-top: 30px;
+            background: rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container .countdownBx .countdown div {
+            position: relative;
+            width: 100px;
+            text-align: center;
+            color: #fff;
+            font-size: 2.5em;
+            font-weight: 500;
+            margin: 0 15px;
+            margin-top: -25px;
+        }
+
+        .container .countdownBx .countdown div::before {
+            content: "text";
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            color: #fff;
+            font-size: 0.35em;
+            font-weight: 500;
+            line-height: 35px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .container .countdownBx .countdown div#month:before {
+            content: "Months";
+        }
+
+        .container .countdownBx .countdown div#day:before {
+            content: "Days";
+        }
+
+        .container .countdownBx .countdown div#hour:before {
+            content: "Hours";
+        }
+
+        .container .countdownBx .countdown div#minute:before {
+            content: "Minutes";
+        }
+
+        .container .countdownBx .countdown div#second:before {
+            content: "Seconds";
+        }
+
+        .container .countdownBx .countdown div#second,
+        .container .countdownBx .countdown div#second:before {
+            color: #ff0;
+        }
+
+        @media (max-width: 991px) {
+            .container .imgBx {
+                display: none;
+            }
+
+            .container .countdownBx {
+                width: 100%;
+            }
+        }
+
+        @media(max-width: 660px) {
+            .container .countdownBx h2 {
+                font-size: 1.1em;
+            }
+
+            .container .countdown .countdown {
+                height: 100px;
+            }
+
+            .container .countdownBx .countdown div {
+                width: 80px;
+                font-size: 2em;
+                margin: 0;
+                margin-top: -25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="imgBx"></div>
+        <div class="countdownBx">
+            <h2>Countdown to new Year<br><span>20<i id="year">20</i></span></h2>
+            <div class="countdown">
+                <div id="month">NA</div>
+                <div id="day">NA</div>
+                <div id="hour">NA</div>
+                <div id="minute">NA</div>
+                <div id="second">NA</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const nextYear = new Date().getFullYear() + 1;
+        const countDate = new Date(`jan 1, ${nextYear} 00:00:00`).getTime();
+
+        function newYear() {
+            const now = new Date().getTime();
+            gap = countDate - now;
+
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+            const month = day * 30;
+
+            const yy = new Date().getFullYear()%2000;
+            const mm = Math.floor(gap / month);
+            const d = Math.floor(gap / (day));
+            const h = Math.floor((gap % (day)) / (hour));
+            const m = Math.floor((gap % (hour)) / (minute));
+            const s = Math.floor((gap % (minute)) / (second));
+
+            document.getElementById('year').innerText = yy;
+            document.getElementById('month').innerText = mm;
+            document.getElementById('day').innerText = d;
+            document.getElementById('hour').innerText = h;
+            document.getElementById('minute').innerText = m;
+            document.getElementById('second').innerText = s;
+        }
+
+        setInterval(function () {
+            newYear();
+        }, 1000)
+    </script>
+</body>
+
+</html>
